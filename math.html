@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Matemática</title>
+</head>
+<body>
+<section class=" Calculdora de potencias ">
+    <h1>
+        Calculadora de potencias
+    </h1>
+<form id="potencias" class="math">
+    <legend> Ingresa lo que deseas calcular</legend>
+    <label for="numero1">Base:</label>
+        <input type="number" id="numero1" name="numero1" required>
+     <label for="numero2">Exponente:</label>
+        <input type="number" id="exponente" name="exponente" required>
+        
+        <button id="botonm" onclick="resolver()">
+            RESOLVER
+
+        </button>
+        <p id="resultado">Resultado: </p>
+</form>
+
+
+
+</section>
+<script>
+    function resolver() {
+            var base = parseFloat(document.getElementById('numero1').value);
+            var exponente = parseFloat(document.getElementById('exponente').value);
+
+            var result = Math.pow(base, exponente);
+
+            var resultadoParrafo = document.getElementById('resultado');
+            
+            resultadoParrafo.textContent = 'El resultado es: ' + result;
+
+            
+        }
+</script>
+
+
+
+
+
+
+</body>
